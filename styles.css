@@ -23,16 +23,18 @@ body {
 .logo-area { display: flex; align-items: center; height: 100%; }
 
 .logo-box {
-    width: 75px; height: 75px; 
-    background-color: #000;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;     
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-box img { 
-    height: 75%; 
-    width: auto; 
+    height: 95%;
+    width: auto;
+    position: relative;
+    top: 5px;
 }
 
 .site-title {

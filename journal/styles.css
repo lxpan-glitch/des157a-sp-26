@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-bottom: 4px solid #000;
+    padding: 10px 4%;
+    height: 85px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-box {
+    width: 75px;   
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-box img {
+    height: 95%; 
+    width: auto;
+    display: block;
+    position: relative;
+    top: 5px;     
+}
+
+.site-title {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 1.8em;
+    margin-left: 15px;
+}
+
+.site-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    text-decoration: underline;
+}
+
+.email-link {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 1.1em;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.email-link:hover {
+    transform: scale(1.05);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8%;
+}
+
+.banner-text h1 {
+    font-family: 'Holtwood One SC', serif;
+    font-size: 4em;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.banner-text h2 {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.btn-projects {
+    font-family: 'Lalezar', sans-serif;
+    background-color: #e0e0e0;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 0px #000;
+    padding: 8px 25px;
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.btn-projects:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #000;
+}
+
+.banner-image {
+    height: 220px;
+}
+
+.banner-image img {
+    height: 100%;
+    width: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.journal-layout {
+    padding: 10px 8% 60px 8%;
+}
+
+.journal-card {
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0px #000;
+    background-color: #fff;
+}
+
+.journal-title {
+    background-color: #e0e0e0;
+    border-bottom: 4px solid #000;
+    text-align: center;
+    padding: 18px 20px 14px 20px;
+}
+
+.journal-title h2 {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 2.2em;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.journal-title p {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.journal-image-wrap {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-bottom: 4px solid #000;
+    background-color: #000;
+}
+
+.journal-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.journal-text {
+    text-align: center;
+    padding: 35px 20px 35px 20px;
+}
+
+.journal-text p {
+    font-size: 1.05em;
+    line-height: 1.9;
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.journal-links {
+    margin-top: 10px;
+    padding-top: 18px;
+    border-top: 3px solid #000;
+}
+
+.journal-links p {
+    font-family: 'Lalezar', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.journal-links a {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.journal-links a:hover {
+    color: #444;
+}
+
+footer {
+    padding: 0 8% 30px 8%;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.95em;
+    font-weight: bold;
+}
