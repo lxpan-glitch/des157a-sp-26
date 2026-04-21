@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2: Functions & DOM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.5;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JavaScript Experimentation 2: Functions & DOM</h1>
+    <div id="output"></div>
+
+    <script>
+
+        const output = document.getElementById('output');
+
+        function pickColor() {
+            let color = prompt('Pick a color: red, orange, yellow, green, blue, purple, or pink');
+            color = color.toLowerCase();
+
+            if (color === 'red' || color === 'orange' || color === 'yellow' || color === 'green' || color === 'blue' || color === 'purple' || color === 'pink') {
+                return color;
+            } else {
+                return 'lightgray';
+            }
+        }
+
+        function changePage(color) {
+            document.body.style.backgroundColor = color;
+
+            if (color === 'blue' || color === 'purple' || color === 'green' || color === 'red') {
+                document.body.style.color = 'white';
+            } else {
+                document.body.style.color = 'black';
+            }
+        }
+
+        function activityList(level) {
+            let activities;
+            let html = '<h2>Suggested Activities</h2><ul>';
+
+            if (level <= 5) {
+                activities = ['Read a book', 'Draw something', 'Listen to music', 'Watch a movie'];
+            } else {
+                activities = ['Play Uno', 'Call a friend', 'Go out for boba', 'Play a group game'];
+            }
+
+            for (let i = 0; i < activities.length; i++) {
+                html += '<li>' + activities[i] + '</li>';
+            }
+
+            html += '</ul>';
+            return html;
+        }
+
+        function randomSuggestion() {
+            let suggestions = [
+                'Drink some water.',
+                'Take a short walk.',
+                'Listen to your favorite song.',
+                'Take a break for 10 minutes.'
+            ];
+
+            let randomNumber = Math.floor(Math.random() * suggestions.length);
+            return suggestions[randomNumber];
+        }
+
+        let name = prompt('What is your name?');
+        let mood = prompt('How are you feeling today? Type: happy, tired, stressed, or excited');
+        let socialLevel = prompt('How social do you feel today? Enter a number from 1 to 10');
+        let colorChoice = pickColor();
+
+        socialLevel = parseInt(socialLevel);
+
+        if (!name) {
+            name = 'friend';
+        }
+
+        if (isNaN(socialLevel)) {
+            socialLevel = 5;
+        }
+
+        let moodMessage;
+
+        if (mood === 'happy') {
+            moodMessage = 'You seem to be in a bright mood today.';
+        } else if (mood === 'tired') {
+            moodMessage = 'You might need a slower day today.';
+        } else if (mood === 'stressed') {
+            moodMessage = 'Take a breath and slow down.';
+        } else if (mood === 'excited') {
+            moodMessage = 'Your energy feels strong today.';
+        } else {
+            moodMessage = 'You entered a unique mood today.';
+        }
+
+        changePage(colorChoice);
+
+        output.innerHTML = '<h2>Hello, ' + name + '!</h2>' +
+                           '<p>Your chosen color was <strong>' + colorChoice + '</strong>.</p>' +
+                           '<p>' + moodMessage + '</p>' +
+                           '<p>Your social level today is <strong>' + socialLevel + '</strong>.</p>' +
+                           activityList(socialLevel) +
+                           '<h2>Random Suggestion</h2>' +
+                           '<p>' + randomSuggestion() + '</p>';
+
+    </script>
+    
+</body>
+</html>
