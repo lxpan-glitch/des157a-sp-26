@@ -25,19 +25,26 @@
 
     <script>
 
-        const output = document.getElementById('output');
+        // Select the output div with querySelector
+        const output = document.querySelector('#output');
 
+        // Ask the user to choose a color and return a valid color
         function pickColor() {
             let color = prompt('Pick a color: red, orange, yellow, green, blue, purple, or pink');
+            
+            // Convert input to lowercase to reduce erros of input from users
             color = color.toLowerCase();
 
+            // Return the chosen color if it is working
             if (color === 'red' || color === 'orange' || color === 'yellow' || color === 'green' || color === 'blue' || color === 'purple' || color === 'pink') {
                 return color;
             } else {
+                // Use a default color if the input is not working
                 return 'lightgray';
             }
         }
 
+        // Change the page background color and adjust text color for readability
         function changePage(color) {
             document.body.style.backgroundColor = color;
 
@@ -48,16 +55,20 @@
             }
         }
 
+        // Create a list of activities based on the social level
         function activityList(level) {
             let activities;
             let html = '<h2>Suggested Activities</h2><ul>';
 
+            // Choose quieter activities for lower social levels
             if (level <= 5) {
                 activities = ['Read a book', 'Draw something', 'Listen to music', 'Watch a movie'];
             } else {
+                // Choose more social activities for higher social levels
                 activities = ['Play Uno', 'Call a friend', 'Go out for boba', 'Play a group game'];
             }
 
+            // Loop through the activities array and add each item to the HTML list
             for (let i = 0; i < activities.length; i++) {
                 html += '<li>' + activities[i] + '</li>';
             }
@@ -66,6 +77,7 @@
             return html;
         }
 
+        // Return one random suggestion
         function randomSuggestion() {
             let suggestions = [
                 'Drink some water.',
@@ -78,23 +90,28 @@
             return suggestions[randomNumber];
         }
 
+        // Ask the user for information
         let name = prompt('What is your name?');
         let mood = prompt('How are you feeling today? Type: happy, tired, stressed, or excited');
         let socialLevel = prompt('How social do you feel today? Enter a number from 1 to 10');
         let colorChoice = pickColor();
 
+        // Convert the social level from text to a number
         socialLevel = parseInt(socialLevel);
 
+        // Set a default name if the user leaves the prompt blank
         if (!name) {
             name = 'friend';
         }
 
+        // Set a default social level if the input is not a number
         if (isNaN(socialLevel)) {
             socialLevel = 5;
         }
 
         let moodMessage;
 
+        // Choose a message based on the user's mood
         if (mood === 'happy') {
             moodMessage = 'You seem to be in a bright mood today.';
         } else if (mood === 'tired') {
@@ -107,8 +124,10 @@
             moodMessage = 'You entered a unique mood today.';
         }
 
+        // Apply the user's selected color to the page
         changePage(colorChoice);
 
+        // Display all results inside the output div
         output.innerHTML = '<h2>Hello, ' + name + '!</h2>' +
                            '<p>Your chosen color was <strong>' + colorChoice + '</strong>.</p>' +
                            '<p>' + moodMessage + '</p>' +
@@ -118,6 +137,6 @@
                            '<p>' + randomSuggestion() + '</p>';
 
     </script>
-    
+
 </body>
 </html>
