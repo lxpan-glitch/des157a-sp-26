@@ -1,0 +1,178 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Robot MadLibs</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>MadLibs</h1>
+        <p>Email: lxpan@ucdavis.edu</p>
+    </header>
+
+    <main>
+        <section class="top-section">
+            <section class="title-block">
+                <h2>AI ROBOT SYSTEM INPUT - UC DAVIS OBSERVATION</h2>
+                <input type="submit" form="madlib-form" value="Generate Log" class="generate-button">
+            </section>
+
+            <section class="robot-block">
+                <p>
+                    UC Davis humans are...
+                    <label for="robot-word">robot word</label>
+                    <input type="text" id="robot-word" list="robot-options" required>
+                </p>
+                <img src="images/computer.png" alt="Small robot computer character" width="118" height="92">
+            </section>
+        </section>
+
+        <form id="madlib-form">
+            <section class="story-grid">
+                <article class="panel">
+                    <p class="panel-number">01</p>
+                    <img src="images/story1.png" alt="Student sitting beside a computer in a room" width="220" height="145">
+                    <p class="caption">
+                        Today, I followed a human named
+                        <label for="name">name</label>
+                        <input type="text" id="name" required>.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">02</p>
+                    <img src="images/story2.png" alt="Student sitting at a desk with a computer" width="220" height="145">
+                    <p class="caption">
+                        At
+                        <label for="location">location</label>
+                        <input type="text" id="location" list="location-options" required>,
+                        the human began
+                        <label for="verb">verb</label>
+                        <input type="text" id="verb" list="verb-options" required>
+                        for no clear reason.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">03</p>
+                    <img src="images/story3.png" alt="Dining table with food" width="220" height="145">
+                    <p class="caption">
+                        After a while, they consumed
+                        <label for="food">food</label>
+                        <input type="text" id="food" list="food-options" required>,
+                        which I believe is their primary energy source.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">04</p>
+                    <img src="images/story4.png" alt="People sitting around a dinner table" width="220" height="145">
+                    <p class="caption">
+                        Suddenly, I detected that they showed strong emotion:
+                        <label for="mood">mood</label>
+                        <input type="text" id="mood" list="mood-options" required>.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">05</p>
+                    <img src="images/story5.png" alt="People at a table with food and a robot observing" width="220" height="145">
+                    <p class="caption">
+                        In response, I offered them a
+                        <label for="object">object</label>
+                        <input type="text" id="object" list="object-options" required>,
+                        but this did not improve the situation.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">06</p>
+                    <img src="images/story6.png" alt="Student reacting near a computer" width="220" height="145">
+                    <p class="caption">
+                        Approximately
+                        <label for="number">number</label>
+                        <input type="text" id="number" list="number-options" required>
+                        seconds later, a loud
+                        <label for="sound">sound</label>
+                        <input type="text" id="sound" list="sound-options" required>
+                        occurred nearby.
+                    </p>
+                </article>
+            </section>
+
+            <datalist id="robot-options">
+                <option value="confusing">
+                <option value="dramatic">
+                <option value="unpredictable">
+                <option value="hungry">
+                <option value="malfunctioning">
+            </datalist>
+
+            <datalist id="location-options">
+                <option value="ARC">
+                <option value="Latitude">
+                <option value="Shields">
+                <option value="the MU">
+                <option value="the Quad">
+            </datalist>
+
+            <datalist id="verb-options">
+                <option value="spinning">
+                <option value="typing">
+                <option value="running">
+                <option value="waiting">
+                <option value="staring">
+            </datalist>
+
+            <datalist id="food-options">
+                <option value="boba">
+                <option value="ramen">
+                <option value="pizza">
+                <option value="waffles">
+                <option value="pasta">
+            </datalist>
+
+            <datalist id="mood-options">
+                <option value="panic">
+                <option value="joy">
+                <option value="stress">
+                <option value="confusion">
+                <option value="suspicion">
+            </datalist>
+
+            <datalist id="object-options">
+                <option value="spoon">
+                <option value="helmet">
+                <option value="cone">
+                <option value="charger">
+                <option value="calculator">
+            </datalist>
+
+            <datalist id="number-options">
+                <option value="7">
+                <option value="12">
+                <option value="24">
+                <option value="42">
+                <option value="99">
+            </datalist>
+
+            <datalist id="sound-options">
+                <option value="boom">
+                <option value="beep">
+                <option value="clang">
+                <option value="buzz">
+                <option value="scream">
+            </datalist>
+        </form>
+    </main>
+</body>
+
+</html>
