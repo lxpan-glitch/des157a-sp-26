@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Robot MadLibs</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+
+        <a href="../../index.html" class="portal-link">
+            ←
+        </a>
+
+        <h1>Richard's MadLibs</h1>
+        </div>
+        
+        <p>Archive ID: LXP-2605-UCD</p>
+    </header>
+
+    <main>
+        <section class="top-section">
+            <section class="title-block">
+                <h2>AI ROBOT SYSTEM INPUT - UC DAVIS OBSERVATION</h2>
+
+                <div class="button-row">
+                    <input type="submit" form="madlib-form" value="Generate Log" class="generate-button">
+                    <button type="button" id="clear-button" class="clear-button">Clear All</button>
+                </div>
+            </section>
+
+            <section class="robot-block">
+                <p>UC Davis humans are <span id="robot-word"></span></p>
+                <img src="images/computer.png" alt="Small robot computer character">
+            </section>
+        </section>
+
+        <form id="madlib-form">
+            <section class="story-grid">
+
+                <article class="panel">
+                    <p class="panel-number">01</p>
+                    <img src="images/story1.png" alt="Student sitting beside a computer in a room">
+                    <p class="caption">
+                        Today, I followed a human named
+                        <input type="text" id="name" required>.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">02</p>
+                    <img src="images/story2.png" alt="Student sitting outside on campus">
+                    <p class="caption">
+                        At
+                        <select id="location" required>
+                            <option value="">Select a location</option>
+                            <option value="Shields Library">Shields Library</option>
+                            <option value="the Quad">the Quad</option>
+                            <option value="Latitude">Latitude</option>
+                            <option value="the ARC">the ARC</option>
+                            <option value="a dorm room">a dorm room</option>
+                        </select>,
+                        the human began
+                        <select id="verb" required>
+                            <option value="">Select an action</option>
+                            <option value="studying for midterms">studying for midterms</option>
+                            <option value="walking in circles">walking in circles</option>
+                            <option value="checking their phone">checking their phone</option>
+                            <option value="looking for boba">looking for boba</option>
+                            <option value="talking to a squirrel">talking to a squirrel</option>
+                        </select>
+                        for no clear reason.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">03</p>
+                    <img src="images/story3.png" alt="Students eating food together">
+                    <p class="caption">
+                        After a while, they consumed
+                        <select id="food" required>
+                            <option value="">Select a food</option>
+                            <option value="boba">boba</option>
+                            <option value="ramen">ramen</option>
+                            <option value="pizza">pizza</option>
+                            <option value="coffee">coffee</option>
+                            <option value="dining hall pasta">dining hall pasta</option>
+                        </select>,
+                        which I believe is their primary energy source.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">04</p>
+                    <img src="images/story4.png" alt="Student working in library">
+                    <p class="caption">
+                        Suddenly, I detected that they showed strong emotion:
+                        <select id="mood" required>
+                            <option value="">Select a mood</option>
+                            <option value="panic">panic</option>
+                            <option value="confusion">confusion</option>
+                            <option value="false confidence">false confidence</option>
+                            <option value="deadline fear">deadline fear</option>
+                            <option value="random joy">random joy</option>
+                        </select>.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">05</p>
+                    <img src="images/story5.png" alt="Students looking at a robot">
+                    <p class="caption">
+                        In response, I offered them a
+                        <select id="object" required>
+                            <option value="">Select an object</option>
+                            <option value="charger">charger</option>
+                            <option value="traffic cone">traffic cone</option>
+                            <option value="spoon">spoon</option>
+                            <option value="calculator">calculator</option>
+                            <option value="library receipt">library receipt</option>
+                        </select>,
+                        but this did not improve the situation.
+                    </p>
+                </article>
+
+                <article class="panel">
+                    <p class="panel-number">06</p>
+                    <img src="images/story6.png" alt="Student surprised in dorm room">
+                    <p class="caption">
+                        Approximately
+                        <select id="number" required>
+                            <option value="">Select a number</option>
+                            <option value="7">7</option>
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                            <option value="42">42</option>
+                            <option value="99">99</option>
+                        </select>
+                        seconds later, a loud
+                        <select id="sound" required>
+                            <option value="">Select a sound</option>
+                            <option value="beep">beep</option>
+                            <option value="scream">scream</option>
+                            <option value="clang">clang</option>
+                            <option value="buzz">buzz</option>
+                            <option value="dramatic gasp">dramatic gasp</option>
+                        </select>
+                        occurred nearby.
+                    </p>
+                </article>
+
+            </section>
+        </form>
+    </main>
+</body>
+
+</html>
