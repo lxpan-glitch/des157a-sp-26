@@ -218,7 +218,7 @@ main {
 .caption input,
 .caption select {
     width: 38px;
-    max-width: 150px;
+    min-width: 38px;
     height: 15px;
     padding: 0 2px;
     border: none;
@@ -236,6 +236,8 @@ main {
 
 .caption select {
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .caption select.placeholder {
