@@ -171,6 +171,7 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
+    object-position: center 30%;
     filter: grayscale(100%);
 }
 
@@ -216,4 +217,9 @@ footer {
 footer p {
     font-size: 0.95em;
     font-weight: bold;
+}
+
+.peer-image{
+    object-fit: contain;
+    background-color: #dcdcdc;
 }
